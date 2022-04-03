@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List Boxes</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+</head>
+<body>
+
+<div><a th:href="@{/}">Home</a></div>
+
+<div class="container-fluid text-center">
+    <h2>List Boxes</h2>
+    <div>
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+            <tr>
+
+            <th>Reciever</th>
+            <th>Weight</th>
+            <th>Box Color</th>
+            <th>Shipping Cost</th>
+            </tr>
+            </thead>
+            <tbody>
+            <th:block th:each="box: ${listBoxes}">
+                <tr>
+
+                    <td>[[${box.reciever}]]</td>
+                    <td>[[${box.weight}]]</td>
+                    <td>[[${box.color}]]</td>
+                    <td>[[${box.cost}]]</td>
+                </tr>
+
+            </th:block>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

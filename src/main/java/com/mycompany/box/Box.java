@@ -1,6 +1,5 @@
 package com.mycompany.box;
 
-
 import javax.persistence.*;
 
 @Entity
@@ -66,8 +65,9 @@ public class Box {
     Australia = 7,2f
      */
 
+    //this.cost = weight * country.Sweden (exempelvis) 10,4 * 1,3 = 13,52
     public void setCost(float cost) {
-        this.cost  = cost;
+        this.cost = cost;
     }
 
     @Override
@@ -76,7 +76,7 @@ public class Box {
                 "Id=" + Id +
                 ", reciever='" + reciever + '\'' +
                 ", weight=" + weight +
-                ", color=" + color +
+                ", color=" + color  +
                 ", cost=" + cost +
                 '}';
     }

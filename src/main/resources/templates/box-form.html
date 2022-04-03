@@ -16,13 +16,13 @@
             <div class="form-group row">
                 <label class="col-sm-4 col-form-label">Name[Reciever]</label>
                 <div class="col-sm-8">
-                    <input type="text" th:field="*{reciever}" class="form-control"/>
+                    <input type="text" th:field="*{reciever}" class="form-control" required minlength="3" maxlength="45"/>
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-sm-4 col-form-label">Weight</label>
                 <div class="col-sm-8">
-                    <input type="text" th:field="*{weight}" class="form-control"/>
+                    <input type="number" th:field="*{weight}" class="form-control" min="0.1" step="0.1" max="25"/>
                 </div>
             </div>
             <div class="form-group row">
@@ -32,15 +32,24 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-4 col-form-label">Country [Shipping Cost]</label>
+                <label class="col-sm-4 col-form-label">Country</label>
                 <div class="col-sm-8">
-                    <input type="text" th:field="*{cost}" class="form-control"/>
+                    <select class="form-select form-select-lg mb-3" th:field="*{cost}" required>
+                            <option value="1">Sweden</option>
+                            <option value="2">China</option>
+                            <option value="3">Brazil</option>
+                            <option value="4">Australia</option>
+                    </select>
+
                 </div>
             </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-success m-2">Save</button>
+
+            </div>
         </div>
-
     </form>
-
 </div>
+
 </body>
 </html>

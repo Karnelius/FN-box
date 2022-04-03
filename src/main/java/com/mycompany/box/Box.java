@@ -58,8 +58,16 @@ public class Box {
         return cost;
     }
 
+    // Skriva någon typ av funktion/metod där this.weight * this.SelectedCountry = cost.
+    /*
+    Sweden = 1,3f
+    China = 4,0f
+    Brazil = 8,4f
+    Australia = 7,2f
+     */
+
     public void setCost(float cost) {
-        this.cost = cost;
+        this.cost  = cost;
     }
 
     @Override

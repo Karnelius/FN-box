@@ -13,4 +13,8 @@ public class BoxService {
     public List<Box> listAll(){
         return (List<Box>) repo.findAll();
     }
+
+    public void save(Box box) {
+        repo.save(box);
+    }
 }

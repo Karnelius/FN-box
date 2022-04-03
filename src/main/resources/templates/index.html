@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Fortnox Boxinator Application</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+</head>
+<body>
+<div class="container-fluid text-center">
+    <h1>Welcome to Boxinator</h1>
+    <div>
+        <a class="h2" th:href="@{/box}">List Dispatches</a>
+    </div>
+    <div>
+        <a class="h2" th:href="@{/box/new}">Add boxes</a>
+    </div>
+</div>
+</body>
+</html>

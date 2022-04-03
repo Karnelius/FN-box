@@ -22,4 +22,13 @@ public class BoxController {
 
         return "boxes";
     }
+
+    @GetMapping("/boxes/new")
+    public String showNewBoxForm (Model model){
+        model.addAttribute("box",new Box());
+
+        return "box-form";
+    }
+
+
 }

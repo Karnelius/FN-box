@@ -58,18 +58,34 @@ public class Box {
     }
 
     public float getCost() {
+        float cost = 0;
+
+        float swe = 1.3f;
+        float chi = 2.5f;
+        float bra = 3.4f;
+        float aus = 5.5f;
+
+        if (getCountry()==("1")) {
+            cost = getWeight() * swe;
+
+        } else if (getCountry()==("2")) {
+            cost = getWeight() * chi;
+
+
+        } else if (getCountry()==("3")) {
+            cost = getWeight() * bra;
+
+
+        } else if (getCountry()==("4")) {
+            cost = getWeight() * aus;
+
+
+        }else{
+            cost = 10.4f;
+        }
         return cost;
     }
 
-    // Skriva någon typ av funktion/metod där this.weight * this.SelectedCountry = cost.
-    /*
-    Sweden = 1,3f
-    China = 4,0f
-    Brazil = 8,4f
-    Australia = 7,2f
-     */
-
-    //this.cost = weight * country.Sweden (exempelvis) 10,4 * 1,3 = 13,52
 
     public void setCost(float cost) {
         this.cost = cost;

@@ -30,16 +30,12 @@ public class BoxController {
         return "box-form";
     }
 
-
-/*
-    @PostMapping("boxes/save")
+    @PostMapping("/boxes/save")
     public String saveBox(Box box){
         service.save(box);
 
         return "redirect:/boxes";
-
     }
-*/
 
 
     /*
@@ -63,7 +59,7 @@ public class BoxController {
         return "redirect:/boxes";
 
     }
-    */
+
 
 
 
@@ -102,7 +98,7 @@ public class BoxController {
 
         return "redirect:/boxes";
     }
-
+ */
 
 
 }

@@ -60,24 +60,21 @@ public class Box {
     public float getCost() {
         float cost = 0;
 
-        float swe = 1.3f;
-        float chi = 2.5f;
-        float bra = 3.4f;
-        float aus = 5.5f;
+        //Ska ej vara == , men sidan/apit kraschar vid .equals() ...
 
         if (getCountry()==("1")) {
-            cost = getWeight() * swe;
+            cost = getWeight() * 1.3f;
 
         } else if (getCountry()==("2")) {
-            cost = getWeight() * chi;
+            cost = getWeight() * 2.5f;
 
 
         } else if (getCountry()==("3")) {
-            cost = getWeight() * bra;
+            cost = getWeight() * 3.4f;
 
 
         } else if (getCountry()==("4")) {
-            cost = getWeight() * aus;
+            cost = getWeight() * 5.5f;
 
 
         }else{

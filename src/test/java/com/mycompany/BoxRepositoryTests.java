@@ -22,10 +22,10 @@ public class BoxRepositoryTests {
     @Test
     public void testAddNew(){
         Box box = new Box();
-        box.setReciever("Test");
-        box.setColor(54321);
-        box.setCost(2.5f);
-        box.setWeight(2.1f);
+        box.setReciever("Xxx");
+        box.setColor(4321);
+        box.setCost(6.5f);
+        box.setWeight(5.1f);
 
         Box savedBox = repo.save(box);
 

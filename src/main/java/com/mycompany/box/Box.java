@@ -4,6 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "box")
+
 public class Box {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,6 +22,9 @@ public class Box {
     @Column(nullable = false)
     private float cost;
 
+    @Transient
+    private String country;
+
     public Integer getId() {
         return Id;
     }
@@ -28,7 +32,6 @@ public class Box {
     public void setId(Integer id) {
         Id = id;
     }
-
 
     public String getReciever() {
         return reciever;
@@ -67,6 +70,7 @@ public class Box {
      */
 
     //this.cost = weight * country.Sweden (exempelvis) 10,4 * 1,3 = 13,52
+
     public void setCost(float cost) {
         this.cost = cost;
     }
@@ -80,6 +84,15 @@ public class Box {
                 ", color=" + color  +
                 ", cost=" + cost +
                 '}';
+    }
+
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
     }
 
 /*
